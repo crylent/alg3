@@ -153,13 +153,7 @@ namespace alg3unittest
 		TEST_METHOD(TestInsert_nextlevel)
 		{
 			INIT_HEAP;
-			heap->insert(6);
-			heap->insert(9);
-			heap->insert(3);
-			heap->insert(1);
-			heap->insert(0);
-			heap->insert(0);
-			heap->insert(0);
+			heap->insert(6, 9, 3, 1, 0, 0, 0);
 			Iterator* iter = heap->create_dft_iterator();
 			int values[16] = { 0, 0, 1, 3, 7, 8, 4, 6, 9, 0, 2, 5, 3, 0, 6, 1 };
 			int i = 0;
@@ -243,7 +237,7 @@ namespace alg3unittest
 			}
 		}
 
-		TEST_METHOD(TestRemove_fulllevel)
+		TEST_METHOD(TestRemove_fullLevel)
 		{
 			INIT_HEAP;
 			heap->remove(8);
